@@ -1,0 +1,15 @@
+
+.venv\Scripts\Activate.ps1
+
+
+cd scrap
+
+
+
+https://www.lpu.in/
+https://www.sandipuniversity.edu.in/
+https://www.mallareddyuniversity.ac.in/
+
+
+
+(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& "c:\Users\AVINASH\Documents\vs code\helpdesk\.venv\Scripts\Activate.ps1")

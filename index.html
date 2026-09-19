@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Help Desk Chatbot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Dummy Website Content -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="static/logo.png" alt="Sandip University Logo" class="logo-img">
+            Sandip University
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Placements</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Empowering the Leaders of Tomorrow</h1>
+            <p>Discover world-class education, state-of-the-art facilities, and 100% placement support on our beautiful
+                250+ acre campus.</p>
+            <button class="cta-btn">Apply Now 2026</button>
+        </div>
+    </header>
+
+    <section class="features-section">
+        <div class="feature-card">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h3>Top Programs</h3>
+            <p>Explore engineering, management, law, and science programs.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa-solid fa-briefcase"></i>
+            <h3>100% Placement Support</h3>
+            <p>Get hired by top MNCs and global companies.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa-solid fa-building-columns"></i>
+            <h3>Modern Campus</h3>
+            <p>Experience a vibrant, Wi-Fi enabled campus life.</p>
+        </div>
+    </section>
+    <div class="chat-wrapper">
+        <div class="chat-popup-message" id="chat-popup-msg">Chat with us! 👋</div>
+        <div class="chat-icon" onclick="toggleChat()" id="chat-icon">
+            <i class="fa-solid fa-comment-dots"></i>
+            <div class="notification-dot" id="notification-dot"></div>
+        </div>
+
+        <div id="chatbox" class="hidden">
+            <div class="header">
+                <div class="bot-info">
+                    <div class="bot-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="bot-details">
+                        <span class="bot-name">College Bot</span>
+                        <span class="bot-status">Online</span>
+                    </div>
+                </div>
+                <div class="close-btn" onclick="toggleChat()">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div id="messages">
+                <!-- Messages will be injected here -->
+            </div>
+            <div class="input-area">
+                <input type="text" id="chat-input" placeholder="Type to search questions..."
+                    onkeypress="handleKeyPress(event)">
+                <button id="send-btn" onclick="handleSearch()"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
